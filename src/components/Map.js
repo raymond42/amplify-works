@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import * as rwandaData from '../data/rwandaData.json';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 
 export default function App() {
   const [viewport, setViewport] = useState({
@@ -29,7 +35,7 @@ export default function App() {
     <div className="map" id="map">
       <ReactMapGL
         {...viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        mapboxApiAccessToken="pk.eyJ1IjoicmF5bW9uZC1nYWt3YXlhIiwiYSI6ImNra2R1dDh4YTBkaWUybm1ucXhlaHVuMjIifQ.61YPNuh3jc1T11l6vr_0uw"
         mapStyle="mapbox://styles/raymond-gakwaya/ckkdw1ogy0oy017n3ihx56bwe"
       >
         {rwandaData.features.map((park) => (

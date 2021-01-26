@@ -7,8 +7,11 @@ export default function Landingpage() {
         <div className="row full-screen">
           <div className="home-content">
             <div className="block">
-              <h1>COVID-19</h1>
-              <h6>and Agriculture Research in Rwanda</h6>
+              <div className="heading-desc">
+                <h1>COVID-19</h1>
+                <h6>and Agriculture Research in Rwanda</h6>
+              </div>
+
               <div className="description-content">
                 <p>
                   Agriculture is the main stay of some of the local communities

@@ -3,8 +3,6 @@ import classNames from 'classnames/bind';
 import styles from '../App.scss';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import amplifyLogo from '../Assets/images/amplifyLogo.png';
-// import MenuDropDown from './Menu';
-// import DefaultAvatar from '../common/images/avatar.png';
 
 const cx = classNames.bind(styles);
 
@@ -13,34 +11,15 @@ export class Navbar extends Component {
     super(props);
     this.state = {
       links: [
-        // { id: 'about', link: 'About' },
         { id: 'testimonies', link: 'Testimonies' },
         { id: 'map', link: 'Map' }
-
-        // { id: 'Logout', link: 'Logout' }
       ]
-      // showMenu: false,
-      // showNotification: false
     };
-    // this.closeMenu = this.closeMenu.bind(this);
   }
 
   onChange = (link) => {
     this.setState({ activeLink: link });
   };
-
-  // displayMenu = () => {
-  //   this.setState({ showMenu: true }, () => {
-  //     document.addEventListener('click', this.closeMenu);
-  //   });
-  // };
-
-  // closeMenu() {
-  //   this.setState({ showMenu: false, showNotification: false }, () => {
-  //     document.removeEventListener('click', this.closeMenu);
-  //   });
-  // }
-
   render() {
     const { links } = this.state;
     const linksArray = [{ id: 'home', link: 'Home' }];
@@ -80,25 +59,8 @@ export class Navbar extends Component {
                 ))}
               </ul>
               <div className="user-action">
-                <a href="/login" className="reset-link">
-                  Login
-                </a>
-
-                {/* <Link>Logout</Link> */}
+                <a href="/login">Login</a>
               </div>
-
-              {/* <div className="dropdown">
-                <li className="img-list-item">
-                  <p>Menu</p>
-                </li>
-                {showMenu ? (
-                  <div className="dropdown-content">
-                    <MenuDropDown user={'User'} />
-                  </div>
-                ) : (
-                  ''
-                )}
-              </div> */}
             </div>
           </div>
         </div>

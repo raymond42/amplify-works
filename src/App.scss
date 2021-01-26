@@ -21,7 +21,7 @@ header {
   right: 0px;
   background-color: #00771a;
   z-index: 22;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #005804;
 }
 
 header .row {
@@ -30,14 +30,29 @@ header .row {
 }
 .user-action {
   font-size: 15px;
-  line-height: 72px;
   text-decoration: none;
   color: #ffffff;
   display: block;
   font-weight: 600;
-  position: relative;
   cursor: pointer;
-  padding-left: 50px;
+  margin-left: 20%;
+  margin-top: 27px;
+  height: 100%;
+  width: 15%;
+  box-shadow: 5px;
+}
+.user-action a {
+  background-color: #fff;
+  color: #00771a;
+  padding: 5px 30px;
+  border-radius: 15px;
+}
+.user-action a:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 15px;
 }
 header .brand-name a img {
   text-decoration: none;
@@ -50,6 +65,9 @@ header .brand-name a img {
 header .navbar {
   display: flex;
   flex-direction: row;
+  width: 45%;
+  position: relative;
+  left: 10%;
 }
 
 header .navbar ul {
@@ -150,7 +168,7 @@ header .navbar ul li a.active::before {
 }
 
 .home .home-content {
-  flex: 0 0 100%;
+  // flex: 0 0 100%;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -158,11 +176,8 @@ header .navbar ul li a.active::before {
 }
 
 .home .home-content .block {
-  /* flex: 0 0 75%; */
-  /* max-width: 75%; */
-  /* padding-left: 400px; */
-  /* border-left: 5px solid #ffffff; */
-  margin-top: 50px;
+  margin-left: 30%;
+  width: 100%;
 }
 
 .home .home-content .block h6 {
@@ -170,9 +185,6 @@ header .navbar ul li a.active::before {
   font-size: 23px;
   font-weight: 500;
   padding: 0;
-  /* position: absolute; */
-  /* right: 17%;
-  top: 40%; */
 }
 .home .home-content .block h3 {
   color: #ffffff;
@@ -185,18 +197,14 @@ header .navbar ul li a.active::before {
   color: #ffffff;
   font-size: 75px;
   font-weight: 600;
-  margin: 0;
-  /* position: absolute; */
-  /* right: 17%;
-  top: 33%; */
+}
+
+.heading-desc {
+  margin-left: 25%;
 }
 
 .home .home-content .block .description-content {
-  padding-top: 50px;
-  width: 70%;
-  /* position: relative; */
-  /* left: 30%; */
-  /* top: 30px; */
+  margin-left: 20px;
 }
 .home .home-content .block .description-content p {
   color: #ffffff;
@@ -924,6 +932,7 @@ iframe {
             border-radius: 15px;
             outline: none;
             font-size: 16px;
+            font-weight: 400;
             width: 100px;
             padding: 5px 30px;
             background: #ffffff;
